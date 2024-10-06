@@ -6,6 +6,12 @@
     max-width: 800px;
     margin: auto;
   }
+
+  body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; 
+  background-color: #e0f7fa; /* Light cyan background */
+}
   
   .news-article {
     padding: 20px;
