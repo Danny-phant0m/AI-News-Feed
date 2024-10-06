@@ -24,10 +24,18 @@ const NewsList = () => {
         <p>Loading news...</p>
       ) : (
         news.map((article, index) => (
-          <div key={index} className="news-article">
-            <h2>{article.title}</h2>
-            <p>{article.summary}</p>
-          </div>
+          <a 
+            key={index} 
+            href={article.url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="news-article-link"
+          >
+            <div className="news-article">
+              <h2>{article.title}</h2>
+              <p>{article.summary}</p>
+            </div>
+          </a>
         ))
       )}
     </div>
