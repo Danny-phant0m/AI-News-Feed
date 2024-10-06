@@ -9,6 +9,9 @@ const newsRoutes = require('./routes/newsRoutes');
 
 app.use('/api', newsRoutes);
 
+// Middleware
+app.use(express.json());
+
 
 // Start the server
 app.listen(PORT, () => {
