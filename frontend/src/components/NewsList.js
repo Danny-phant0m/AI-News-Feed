@@ -6,7 +6,10 @@ const NewsList = () => {
   useEffect(() => {
     // Fetch news  backend
     const fetchNews = async () => {
-      const response = await fetch('http://localhost:3000/news'); 
+      const response = await fetch('http://localhost:3000/news');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
       const data = await response.json();
       setNews(data);
       console.log(data)
