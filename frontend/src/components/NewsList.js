@@ -1,13 +1,12 @@
-// NewsList.js
 import React, { useEffect, useState } from 'react';
 
 const NewsList = () => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    // Fetch news from backend
+    // Fetch news  backend
     const fetchNews = async () => {
-      const response = await fetch('http://localhost:3000/news'); // Your backend URL
+      const response = await fetch('http://localhost:3000/news'); 
       const data = await response.json();
       setNews(data);
     };

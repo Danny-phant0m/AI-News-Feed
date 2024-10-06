@@ -1,0 +1,25 @@
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .news-article {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .news-article h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .news-article p {
+    font-size: 1.1rem;
+  }
+  
