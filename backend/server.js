@@ -14,9 +14,9 @@ app.use(express.json());
 app.use('/', newsRoutes);
 
 
-app.get('/', function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for all origins!'})
-})
+// app.get('/', function (req, res, next) {
+//   res.json({msg: 'This is CORS-enabled for all origins!'})
+// })
 
 // Connect to MongoDB
 // mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
