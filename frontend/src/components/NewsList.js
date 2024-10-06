@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardContent, Typography, Button, Grid, CircularProgress } from '@mui/material';
+import { Card, CardContent, Typography, } from '@mui/material';
+import '../styles/NewsList.css';
 
 const NewsList = () => {
   const [news, setNews] = useState([]);
@@ -19,33 +20,28 @@ const NewsList = () => {
   }, []);
 
   return (
-    <div style={{ padding: '20px' }}>
-      <Grid container spacing={3}>
-        {news.length === 0 ? (
-          <CircularProgress />
-        ) : (
-          news.map((article, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card 
-                onClick={() => window.open(article.url, '_blank')} 
-                style={{ cursor: 'pointer' }}
-              >
-                <CardContent>
-                  <Typography variant="h5" component="div">
-                    {article.title}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    {article.summary}
-                  </Typography>
-                  <Button size="small" color="primary">
-                    Read More
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))
-        )}
-      </Grid>
+    <div className="news-container">
+      {news.length === 0 ? (
+        <Typography variant="h6">Loading news...</Typography>
+      ) : (
+        news.map((article, index) => (
+          <Card key={index} className="news-article" variant="outlined">
+            <CardContent>
+              <Typography variant="h5" component="h2" color="primary">
+                {article.title}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                {article.summary}
+              </Typography>
+              <Typography variant="body2" color="textPrimary">
+                <a href={article.url} target="_blank" rel="noopener noreferrer">
+                  Read more
+                </a>
+              </Typography>
+            </CardContent>
+          </Card>
+        ))
+      )}
     </div>
   );
 };

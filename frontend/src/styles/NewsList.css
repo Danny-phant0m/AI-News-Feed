@@ -1,0 +1,17 @@
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Spacing between cards */
+    padding: 20px;
+  }
+  
+  .news-article {
+    min-width: 300px; /* Minimum width for cards */
+    background-color: #f5f5f5; /* Background color for cards */
+    transition: transform 0.3s;
+  }
+  
+  .news-article:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  
